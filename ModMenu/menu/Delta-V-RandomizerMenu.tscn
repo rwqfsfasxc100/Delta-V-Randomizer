@@ -1,0 +1,187 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://menu/MenuTheme.tres" type="Theme" id=1]
+[ext_resource path="res://menu/PanelWithHugeShadow.tres" type="StyleBox" id=2]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hud/TabHintContainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Delta-V-Randomizer/ModMenu/menu/toggle_button.gd" type="Script" id=5]
+[ext_resource path="res://Delta-V-Randomizer/ModMenu/menu/DeltaVRandomizer_SettingsLayer.gd" type="Script" id=6]
+[ext_resource path="res://menu/TabsWithGamepadControl.gd" type="Script" id=8]
+
+[node name="DeltaVRandomizerMenu" type="Popup"]
+margin_left = -400.0
+margin_right = 160.0
+margin_bottom = 750.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 800, 750 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource( 1 )
+popup_exclusive = true
+script = ExtResource( 6 )
+
+[node name="NoMargins" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlaySoundsOnTheseButtons" parent="NoMargins" instance=ExtResource( 3 )]
+
+[node name="CenterContainer" type="CenterContainer" parent="NoMargins"]
+margin_right = 1070.0
+margin_bottom = 750.0
+rect_min_size = Vector2( 800, 720 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TabHintContainer" parent="NoMargins/CenterContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 17.0
+margin_right = 1070.0
+margin_bottom = 733.0
+rect_min_size = Vector2( 1070, 716 )
+size_flags_horizontal = 4
+
+[node name="MarginContainer" parent="NoMargins/CenterContainer/TabHintContainer" index="0"]
+margin_right = 1070.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 32 )
+custom_constants/margin_right = -80
+custom_constants/margin_left = -80
+
+[node name="HBoxContainer" parent="NoMargins/CenterContainer/TabHintContainer/MarginContainer" index="0"]
+modulate = Color( 1, 1, 1, 0.501961 )
+margin_left = -80.0
+margin_right = 1150.0
+margin_bottom = 43.0
+size_flags_vertical = 3
+
+[node name="Right" parent="NoMargins/CenterContainer/TabHintContainer/MarginContainer/HBoxContainer" index="0"]
+margin_bottom = 39.0
+
+[node name="Label" parent="NoMargins/CenterContainer/TabHintContainer/MarginContainer/HBoxContainer" index="1"]
+margin_top = 0.0
+margin_right = 1150.0
+margin_bottom = 39.0
+
+[node name="Left" parent="NoMargins/CenterContainer/TabHintContainer/MarginContainer/HBoxContainer" index="2"]
+margin_left = 1150.0
+margin_right = 1230.0
+margin_bottom = 39.0
+
+[node name="TabsWithGamepadControl" type="TabContainer" parent="NoMargins/CenterContainer/TabHintContainer"]
+show_behind_parent = true
+margin_right = 1070.0
+margin_bottom = 716.0
+rect_min_size = Vector2( 0, 716 )
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 2 )
+use_hidden_tabs_for_min_size = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DVRNG_MENU" type="Tabs" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 50.0
+margin_right = -1.0
+margin_bottom = -1.0
+
+[node name="MarginContainer" type="MarginContainer" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 16
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/MarginContainer"]
+margin_top = 16.0
+margin_right = 1068.0
+margin_bottom = 617.0
+custom_constants/separation = 6
+
+[node name="randomize_ships" type="CheckButton" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/MarginContainer/VBoxContainer"]
+margin_right = 1068.0
+margin_bottom = 41.0
+hint_tooltip = "RNG_RANDOMIZE_SHIPS_DESC"
+size_flags_horizontal = 3
+text = "RNG_RANDOMIZE_SHIPS"
+script = ExtResource( 5 )
+
+[node name="randomize_equipment" type="CheckButton" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/MarginContainer/VBoxContainer"]
+margin_top = 47.0
+margin_right = 1068.0
+margin_bottom = 88.0
+hint_tooltip = "RNG_RANDOMIZE_EQUIPMENT_DESC"
+size_flags_horizontal = 3
+text = "RNG_RANDOMIZE_EQUIPMENT"
+script = ExtResource( 5 )
+setting = "randomize_equipment"
+
+[node name="allow_unobtainable_ships" type="CheckButton" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/MarginContainer/VBoxContainer"]
+margin_top = 47.0
+margin_right = 1068.0
+margin_bottom = 88.0
+hint_tooltip = "RNG_USE_UNOBAINABLE_SHIPS_DESC"
+size_flags_horizontal = 3
+text = "RNG_USE_UNOBAINABLE_SHIPS"
+script = ExtResource( 5 )
+setting = "allow_unobtainable_ships"
+
+[node name="remove_slot_restriction" type="CheckButton" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/MarginContainer/VBoxContainer"]
+margin_top = 282.0
+margin_right = 1068.0
+margin_bottom = 323.0
+hint_tooltip = "RNG_REMOVE_EQUIPMENT_RESTRICTION_DESC"
+size_flags_horizontal = 3
+text = "RNG_REMOVE_EQUIPMENT_RESTRICTION"
+script = ExtResource( 5 )
+setting = "remove_slot_restriction"
+
+[node name="override_consumable_limits" type="CheckButton" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/MarginContainer/VBoxContainer"]
+margin_top = 329.0
+margin_right = 1068.0
+margin_bottom = 370.0
+hint_tooltip = "RNG_OVERRIDE_CONSUMABLE_LIMITS_DESC"
+size_flags_horizontal = 3
+text = "RNG_OVERRIDE_CONSUMABLE_LIMITS"
+script = ExtResource( 5 )
+setting = "override_consumable_limits"
+
+[node name="Control" type="Control" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Save" type="Button" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/Control"]
+margin_left = 7.0
+margin_top = -55.0
+margin_right = 341.0
+margin_bottom = -11.0
+focus_neighbour_right = NodePath("../Cancel")
+text = "SETTINGS_SAVE"
+
+[node name="Cancel" type="Button" parent="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -367.0
+margin_top = -55.0
+margin_right = -11.0
+margin_bottom = -11.0
+focus_neighbour_left = NodePath("../Save")
+text = "SETTINGS_CANCEL"
+
+[connection signal="about_to_show" from="." to="." method="_on_DeltaVRandomizer_about_to_show"]
+[connection signal="pressed" from="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/Control/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="NoMargins/CenterContainer/TabHintContainer/TabsWithGamepadControl/DVRNG_MENU/Control/Cancel" to="." method="_on_Cancel_pressed"]
+
+[editable path="NoMargins/CenterContainer/TabHintContainer"]

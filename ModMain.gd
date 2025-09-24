@@ -39,7 +39,7 @@ func _init(modLoader = ModLoader):
 	installScriptExtension("ships/ship-ctrl.gd")
 	
 	# Loads translation file. For this example, the english translation file is used. 
-#	updateTL("i18n/en.txt", "|")
+	updateTL("i18n/en.txt", "|")
 	
 # Do stuff on ready
 # At this point all AutoLoads are available and the game is loaded
