@@ -59,6 +59,8 @@ func createShipByConfig(cfg: Dictionary, new = true, age = 24 * 3600 * 365 * 100
 				else:
 					add = false
 				
+				add = i.visible
+				
 				if Settings.DVRandomizer["options"]["remove_slot_restriction"]:
 					add = true
 				
