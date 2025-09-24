@@ -1,10 +1,26 @@
 # Delta-V-Randomizer
 A mod that completely randomizes ships and/or equipment fitted on the loading of the vessel.
 
+> [!WARNING]
+> This mod will break stuff, and not in a nice manner either.
+> You are entirely liable to damage caused through use of this mod.
+> 
+> MAKE SURE YOU BACK UP YOUR SAVES BEFORE USE, YOU HAVE BEEN WARNED!
 
+<img width="1199" height="674" alt="image" src="https://github.com/user-attachments/assets/f25742ea-8f9e-489a-8d04-51d1b319f160" />
+
+A unique way to play the game. Completely randomize the ship you start a dive with and encounter. End up with a broken ship outfit, an unconventional setup, or something completely useless.
+
+<img width="677" height="674" alt="image" src="https://github.com/user-attachments/assets/8c519427-fe26-4d87-9c46-d7661fbeb18f" />
+
+Also completely compatible with other modded equipment and ships!
+
+<img width="1199" height="674" alt="image" src="https://github.com/user-attachments/assets/f97f0226-783d-4919-8242-d04c44573e81" />
 
 ### Options
 This mod has several options to allow for a filtered experience.
+
+<img width="822" height="224" alt="image" src="https://github.com/user-attachments/assets/a945d02b-2fa1-4fad-a1a4-8a17ce2461bc" />
 
 #### Randomize ships
 * Causes all ships to choose a random model.
