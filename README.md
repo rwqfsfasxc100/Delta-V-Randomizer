@@ -20,8 +20,6 @@ Also completely compatible with other modded equipment and ships!
 ### Options
 This mod has several options to allow for a filtered experience.
 
-<img width="822" height="224" alt="image" src="https://github.com/user-attachments/assets/a945d02b-2fa1-4fad-a1a4-8a17ce2461bc" />
-
 #### Randomize ships
 * Causes all ships to choose a random model.
 * Disabling this will end allow only equipment randomization for vessels
