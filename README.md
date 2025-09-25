@@ -38,8 +38,3 @@ This mod has several options to allow for a filtered experience.
 * Removes usual slot restrictions. Equipment from a slot type will always be available from the random pool.
 * Any orientation of equipment can be fitted to a slot, not just the correct side.
 * Do expect this to cause severe issues. There is nothing to prevent equipment clipping into the ship and making it unflyable.
-
-#### Override consumable limits
-* Lets any numerical equipment be available. This is a toned-down equivalent to remove equipment restrictions.
-* Does not do anything unique if remove equipment restriction is enabled
-* Removes ship limits for the turbine, reactor core, ultracapacitor, propellant tank, driver magazine and nano storage.
