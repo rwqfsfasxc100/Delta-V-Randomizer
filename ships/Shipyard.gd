@@ -41,23 +41,23 @@ func createShipByConfig(cfg: Dictionary, new = true, age = 24 * 3600 * 365 * 100
 				var sys = i.system
 				if i.numVal >= 0:
 					sys = i.numVal
-				var shipAllows = alwaysAllows(slot_type_main,random_ship_data,slot.restrictType,slot.always)
-				if shipAllows:
-					if i.visible == false:
-						add = false
-					if i.capabilityLock:
-						if not random_ship_data.queryCapability(slot_type_main, i.system):
-							add = false
-					if i.numVal >= 0:
-						if Settings.DVRandomizer["options"]["override_consumable_limits"]:
-							add = true
-						else:
-							var limit = random_ship_data.upgradeLimits.get(slot_type_main, null)
-							if limit is Vector2:
-								if i.numVal < limit.x or i.numVal > limit.y:
-									add = false
-				else:
-					add = false
+#				var shipAllows = alwaysAllows(slot_type_main,random_ship_data,slot.restrictType,slot.always)
+#				if shipAllows:
+#					if i.visible == false:
+#						add = false
+#					if i.capabilityLock:
+#						if not random_ship_data.queryCapability(slot_type_main, i.system):
+#							add = false
+#					if i.numVal >= 0:
+#						if Settings.DVRandomizer["options"]["override_consumable_limits"]:
+#							add = true
+#						else:
+#							var limit = random_ship_data.upgradeLimits.get(slot_type_main, null)
+#							if limit is Vector2:
+#								if i.numVal < limit.x or i.numVal > limit.y:
+#									add = false
+#				else:
+#					add = false
 				
 				add = i.visible
 				
