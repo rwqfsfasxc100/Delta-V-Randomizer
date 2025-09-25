@@ -17,7 +17,3 @@ RNG_USE_UNOBAINABLE_SHIPS_DESC|Adds ships normally unobtainable to player, yet r
 RNG_REMOVE_EQUIPMENT_RESTRICTION|Remove equipment restriction
 
 RNG_REMOVE_EQUIPMENT_RESTRICTION_DESC|Removes usual slot restrictions. Equipment from a slot type will always be available from the random pool. \n\nDo expect this to cause severe issues. There is nothing to prevent equipment clipping into the ship and making it unflyable.
-
-RNG_OVERRIDE_CONSUMABLE_LIMITS|Override consumable limits
-
-RNG_OVERRIDE_CONSUMABLE_LIMITS_DESC|Lets any numerical equipment be available. This is a toned-down equivalent to remove equipment restrictions. \n\nRemoves ship limits for the turbine, reactor core, ultracapacitor, propellant tank, driver magazine and nano storage.

@@ -10,7 +10,6 @@ var DVRandomizer = {
 		"randomize_equipment":true,
 		"allow_unobtainable_ships":false,
 		"remove_slot_restriction":false,
-		"override_consumable_limits":false,
 	},
 }
 
