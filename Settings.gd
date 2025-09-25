@@ -16,7 +16,7 @@ var DVRandomizer = {
 
 # The config file name. Make sure you set something unique
 # Config is set to the cfg folder to make it easy to find
-var DVRandomizer_ConfigPath = "user://cfg/DVRandomizer.cfg"
+var DVRandomizer_ConfigPath = "user://cfg/Delta-V-Randomizer.cfg"
 var DVRandomizer_CfgFile = ConfigFile.new()
 
 var DVRandomizer_default = {}
