@@ -77,13 +77,13 @@ func createShipByConfig(cfg: Dictionary, new = true, age = 24 * 3600 * 365 * 100
 				var select = dt[int(rand_range(0,size - 1))]
 				random_ship_data.setConfig(s,select)
 #	random_num_gen.randomize()
-	random_ship_data.initializeTuning()
-	get_tuning(random_ship_data)
-	var config = random_ship_data.shipConfig
-	random_ship_data.shipConfig.fuel.initial = config.fuel.capacity
-	random_ship_data.shipConfig.drones.initial = config.drones.capacity
-	random_ship_data.shipConfig.ammo.initial = config.ammo.capacity
-	var fc = random_ship_data.fullConfig
+#	random_ship_data.initializeTuning()
+#	get_tuning(random_ship_data)
+#	var config = random_ship_data.shipConfig
+#	random_ship_data.shipConfig.fuel.initial = config.fuel.capacity
+#	random_ship_data.shipConfig.drones.initial = config.drones.capacity
+#	random_ship_data.shipConfig.ammo.initial = config.ammo.capacity
+#	var fc = random_ship_data.fullConfig
 	return random_ship_data
 
 
