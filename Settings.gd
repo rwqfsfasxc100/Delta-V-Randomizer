@@ -1,10 +1,9 @@
 # [license]
-# 3-Clause BSD NON-AI License
-# 
-# Copyright 2026 __hev (Benjamin Buckhurst)
+# SPDX-License-Identifier: LicenseRef-Proprietary
+# Copyright © 2026 __hev (Benjamin Buckhurst). All Rights Reserved.
 # 
 # Redistribution and use in source and binary forms, with or without modification,
-# are permitted provided that the following conditions are met:
+# are permitted provided that all following conditions are met:
 # 
 # 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 # 
@@ -55,7 +54,7 @@ var DVRandomizer_default = {}
 var random_settings_uinit : bool = false
 func _ready():
 	if random_settings_uinit:
-		OS.kill(OS.get_process_id())
+		ModLoader._savedObjects[0].log_double_load_error(get_script().resource_path)
 	random_settings_uinit = true
 	var dir = Directory.new()
 	dir.make_dir("user://cfg")
